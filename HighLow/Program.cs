@@ -5,8 +5,8 @@
         static void Main()
         {
             Console.WriteLine("Welcome to High Low.");
-            Console.WriteLine($"Guess numbers between 1 and {HighLow.MAXIMUM}.");
-            HighLow.Hint();
+            Console.WriteLine($"Guess numbers between 1 and {HighLowGame.MAXIMUM}.");
+            HighLowGame.Hint();
             while(HighLowGame.GetPot() > 0)
             {
                 Console.WriteLine("Press h for higher, l for lower, ? to buy a hint,");
