@@ -13,13 +13,13 @@ namespace HighLow
         private static int nextNumber = Random.Shared.Next(1, MAXIMUM + 1);
         private static int pot = 10;
 
-        private static int GetPot(int pot)
+        public static int GetPot()
         {
             int Pot = pot;
             return Pot;
         }
 
-        static void Guess(bool higher)
+        public static void Guess(bool higher)
         {
             if ((higher & nextNumber >= currentNumber ) ||
                 (!higher & nextNumber <= currentNumber))
@@ -39,9 +39,11 @@ namespace HighLow
             Console.WriteLine($"The current number is {currentNumber}.");
         }
 
-        static void Hint()
+        public static void Hint()
         {
-            throw new NotImplementedException();
+            int half = MAXIMUM / 2;
+            Console.WriteLine($"\nThe current number is {currentNumber}, the next number is at least {half}.\n");
+            pot--;
         }
     }
 }
