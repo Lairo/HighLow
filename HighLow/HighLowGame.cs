@@ -42,7 +42,11 @@ namespace HighLow
         public static void Hint()
         {
             int half = MAXIMUM / 2;
-            Console.WriteLine($"\nThe current number is {currentNumber}, the next number is at least {half}.\n");
+            if (currentNumber > half)
+            {
+                Console.WriteLine($"\n\tThe current number is {currentNumber}, the next number is at least {half}.\n");
+            }
+            else Console.WriteLine($"\n\tThe current number is {currentNumber}, the next number is less than {half}.\n");
             pot--;
         }
     }
